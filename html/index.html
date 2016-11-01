@@ -4,6 +4,121 @@
     <meta charset="utf-8">
     <meta  name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Hola Mundo !!! </title>
+	
+	<style>
+#contenedor {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#fan1 {
+    position: absolute;
+    width: 100px;
+    opacity: 0;
+	left: 350px;
+	top: 180px;
+	
+    -webkit-animation: fana1 linear 6s;
+    -moz-animation: fana1 linear 6s;
+    animation: fana1 linear 6s;
+}
+
+#boo {
+    opacity: 0;
+    position: absolute;
+    left: 200px;
+    top: 230px;
+    -webkit-animation: aboo linear 6s;
+    -moz-animation: aboo linear 6s;
+    animation: aboo linear 6s;
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s;
+}
+
+@-moz-keyframes aboo
+{
+    from  { opacity:1; transform:scale(1.0); }
+    20%, 60% { transform:scale(0.8) rotate(15deg); }
+    40%, 80% { transform:scale(1.2) rotate(-15deg); }
+    to { opacity:1; transform:scale(1.0) rotate(0deg); }
+}
+
+@-webkit-keyframes aboo
+{
+    from  { opacity:1; transform:scale(1.0); }
+    20%, 60% { transform:scale(0.8) rotate(15deg); }
+    40%, 80% { transform:scale(1.2) rotate(-15deg); }
+    to { opacity:1; transform:scale(1.0) rotate(0deg); }
+}
+
+@keyframes aboo
+{
+    from  { opacity:1; transform:scale(1.0); }
+    20%, 60% { transform:scale(0.8) rotate(15deg); }
+    40%, 80% { transform:scale(1.2) rotate(-15deg); }
+    to { opacity:1; transform:scale(1.0) rotate(0deg); }
+}
+
+@-moz-keyframes fana1
+{
+    from  { transform:scale(1); left: 20px; top: 14px; opacity:0; }
+    10% { transform:scale(1); left: 313px; top: 147px; opacity:0.9; }
+    20% { transform:scale(1); left: 474px; top: 159px; opacity:0.9; }
+    30% { transform:scale(1); left: 680px; top: 290px; opacity:0; }
+
+    40%  { transform:scale(1) rotateY(180deg); left: 685px; top: 9px; opacity:0; }
+    50%  { transform:scale(1) rotateY(180deg); left: 480px; top: 224px; opacity:0.9; }
+    60%  { transform:scale(1) rotateY(180deg); left: 240px; top: 207px; opacity:0.9; }
+    70%  { transform:scale(1) rotateY(180deg); left: 495px; top: 121px; opacity:0; }
+
+    79%  { transform:scale(1) rotateY(0deg); left: 350px; top: 250px; opacity:0; }
+    80%  { transform:scale(10) rotateY(0deg); left: 350px; top: 250px; opacity:1; }
+    90%  { transform:scale(0.5) rotateY(0deg); left: 350px; top: 180px; opacity:1; }
+    to { transform:scale(1) rotateY(0deg); left: 350px; top: 180px; opacity:1; }
+}
+
+@-webkit-keyframes fana1
+{
+    from  { transform:scale(1); left: 20px; top: 14px; opacity:0; }
+    10% { transform:scale(1); left: 313px; top: 147px; opacity:0.9; }
+    20% { transform:scale(1); left: 474px; top: 159px; opacity:0.9; }
+    30% { transform:scale(1); left: 680px; top: 290px; opacity:0; }
+
+    40%  { transform:scale(1) rotateY(180deg); left: 685px; top: 9px; opacity:0; }
+    50%  { transform:scale(1) rotateY(180deg); left: 480px; top: 224px; opacity:0.9; }
+    60%  { transform:scale(1) rotateY(180deg); left: 240px; top: 207px; opacity:0.9; }
+    70%  { transform:scale(1) rotateY(180deg); left: 495px; top: 121px; opacity:0; }
+
+    79%  { transform:scale(1) rotateY(0deg); left: 350px; top: 250px; opacity:0; }
+    80%  { transform:scale(10) rotateY(0deg); left: 350px; top: 250px; opacity:1; }
+    90%  { transform:scale(0.5) rotateY(0deg); left: 350px; top: 180px; opacity:1; }
+    to { transform:scale(1) rotateY(0deg); left: 350px; top: 180px; opacity:1; }
+}
+
+@keyframes fana1
+{
+    from  { transform:scale(1); left: 20px; top: 14px; opacity:0; }
+    10% { transform:scale(1); left: 313px; top: 147px; opacity:0.9; }
+    20% { transform:scale(1); left: 474px; top: 159px; opacity:0.9; }
+    30% { transform:scale(1); left: 680px; top: 290px; opacity:0; }
+
+    40%  { transform:scale(1) rotateY(180deg); left: 685px; top: 9px; opacity:0; }
+    50%  { transform:scale(1) rotateY(180deg); left: 480px; top: 224px; opacity:0.9; }
+    60%  { transform:scale(1) rotateY(180deg); left: 240px; top: 207px; opacity:0.9; }
+    70%  { transform:scale(1) rotateY(180deg); left: 495px; top: 121px; opacity:0; }
+
+    79%  { transform:scale(1) rotateY(0deg); left: 350px; top: 250px; opacity:0; }
+    80%  { transform:scale(10) rotateY(0deg); left: 350px; top: 250px; opacity:1; }
+    90%  { transform:scale(0.5) rotateY(0deg); left: 350px; top: 180px; opacity:1; }
+    to { transform:scale(1) rotateY(0deg); left: 350px; top: 180px; opacity:1; }
+}
+</style>
+	
+	
     <head>
 <link rel="stylesheet" type="text/css" href="../css/normalize.css">
 <link rel="stylesheet" type="text/css" href="../css/estilos.css">
@@ -34,5 +149,10 @@
         <audio src="../Images/pruebaT.mp3" controls="controls" type="audio/mp3"> </audio>
       </article>
     </section>
+	
+	<div id="contenedor">
+		<img src="../Images/fantasma1.png" id="fan1" />
+		<img src="../Images/boo.png" id="boo" />
+	</div>
   </body>
 </html>
