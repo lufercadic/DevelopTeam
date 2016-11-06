@@ -1,0 +1,61 @@
+
+
+a.estilo1{
+ color: navy;
+
+}
+/*h1 {
+  color: navy;
+}*/
+p.estilo2 {
+
+  color: green;
+}
+
+#laTorta{
+width: 100%
+}
+
+
+.tamanioTorta{
+	font-weight: bold;
+
+}
+
+@media screen and (min-width: 480px){
+	#tamanioTorta1{
+		color:  white;
+	}
+	#tamanioTorta2{
+		color: white;
+	}
+	#tamanioTorta3{
+		color: black;
+	}
+
+}
+
+@media screen and (min-width: 726px){
+	#tamanioTorta1{
+		color: white;
+	}
+	#tamanioTorta2{
+		color: black;
+	}
+	#tamanioTorta3{
+		color: white;
+	}
+
+}
+
+@media screen and (min-width: 950px){
+	#tamanioTorta1{
+		color: black;
+	}
+	#tamanioTorta2{
+		color: white;
+	}
+	#tamanioTorta3{
+		color: white;
+	}
+}
