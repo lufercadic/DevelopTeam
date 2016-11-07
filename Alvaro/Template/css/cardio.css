@@ -227,6 +227,35 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 	background: #00a8ff;
 }
 
+
+
+
+.btn.btn-red {
+	background: #bf0a30;
+}
+
+.btn.btn-red:hover {
+	background: #bf0b50;
+}
+
+.btn.btn-red-fill {
+	color: #bf0a30;
+	border-color: #bf0a30;
+	background: transparent;
+}
+
+.btn.btn-red-fill:hover {
+	color: white;
+	background: #bf0a30;
+}
+
+
+
+
+
+
+
+
 .btn.btn-white-fill {
 	color: #fff;
 	border-color: #fff;
@@ -1109,8 +1138,3 @@ footer .social-footer li:hover a {
 		padding-top: 0;
 	}
 }
-
-
-
-
-
