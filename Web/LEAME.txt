@@ -1,0 +1,5 @@
+En este directorio va el contenido del desarrollo como tal
+los componentes son los siguientes:
+Jquery 3.1.1
+Bootstrap 3.3.7
+Modernizr 3.3.1

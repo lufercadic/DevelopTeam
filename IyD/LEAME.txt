@@ -1,0 +1,6 @@
+Aqui van los prototipos independientes, pruebas y demas.
+
+En la carpeta "Base" quedan los ejemplo tal y como se descargaron.
+En cada carpeta con nuestro nombre ponemos las pruebas y desarrollo que estamos haciendo,
+la idea es que si estamos haciendo algo basado en lo que esta en la carpeta base, creamos
+una carpeta con el mismo nombre asi los demas sabemos maso que se esta haciendo.
