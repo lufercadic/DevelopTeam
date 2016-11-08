@@ -3,3 +3,4 @@ http://tympanus.net/codrops/2013/12/18/perspective-page-view-navigation/
 
 - Se escogio el modelo Move Left (index2.html)
 - Pero usar colores como los del ejemplo index3.html (un fondo mas oscuro)
+- de verdad - leido -alvaro
