@@ -1,2 +1,3 @@
 Me parece buena idea tener un directorio donde dejamos notas para todos, igual
 es preferible seguir usando el foro.
+HOla, si .. pero si pillas hay una pestania que se llama issues para eso.. (en la pagina de github..).. no lo he probado nunca ..voy a escribir algo aver que tatl.. tambien tenemos un wiki para la documentacion si se quiere.
