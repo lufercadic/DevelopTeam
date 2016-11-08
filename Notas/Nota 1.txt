@@ -1,3 +1,5 @@
 2016-11-06
 Alvaro, modifique la estructura que habias dejado. 
 me parece que asi queda un poco mas ordenado, igual revisa y miramos si lo cambiamos.
+
+me parece bien por ahora... mas adelante cuando entendamos mejor esto  podemos jugar creando branch.. 
