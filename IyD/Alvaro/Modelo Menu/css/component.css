@@ -600,7 +600,7 @@ html, body, .perspective {
 
 /* Media Queries */
 @media screen and (max-width: 77em) {
-	
+
 	.outer-nav.top {
 		top: 15%;
 	}
@@ -619,7 +619,7 @@ html, body, .perspective {
 	.outer-nav.bottom {
 		bottom: 5%;
 	}
-	
+
 	.outer-nav.horizontal {
 		font-size: 1.7em;
 		width: 6.2em;
