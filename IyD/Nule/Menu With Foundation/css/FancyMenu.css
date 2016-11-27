@@ -1,0 +1,239 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+	   url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+	   url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+	   url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+	   url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body, .OP_perspective {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: #ddd;
+	color: black;
+	font-weight: bold;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.OP_perspective {
+	background: white;
+	position: relative;
+	background: #E96E4F; /*Color de fondo del menu*/
+}
+
+.OP_container {
+	background: white; /*Fondo del contenido*/
+	min-height: 100%;
+	position: relative;
+	outline: 1px solid rgba(0,0,0,0);
+	z-index: 10;
+	-webkit-transform: translateZ(0) translateX(0) rotateY(0deg); /* reset transforms (Chrome bug) */
+	transform: translateZ(0) translateX(0) rotateY(0deg);
+}
+
+.OP_container::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0px;
+	opacity: 0;
+	background: rgba(0, 0, 0, 0.2);
+	/* the transition delay of the height needs to be synced with the container transition time */
+	-webkit-transition: opacity 0.4s, height 0s 0.4s;
+	transition: opacity 0.4s, height 0s 0.4s;
+}
+
+.OP_wrapper {
+	position: relative;
+}
+
+/* Modal view */
+.OP_perspective.OP_modalview {
+	position: fixed;
+	-webkit-perspective: 1500px;
+	perspective: 1500px;
+}
+
+.OP_modalview .OP_container {
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.OP_modalview .OP_wrapper {
+	-webkit-transform: translateZ(-1px); /* solves a rendering bug in Chrome on Windows */
+}
+
+.OP_animate .OP_container::after {
+	opacity: 1;
+	height: 101%;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+/* Outer Nav */
+.OP_nav {
+	position: fixed; /*Esto estaba como absolute, pero al cambiarlo se quito el problema del espacio extra en ie*/
+	height: auto;
+	font-size: 2em;
+	
+	right: 25%;
+
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+/*Esto es solo para los iconos de los enlaces*/
+.OP_nav a::before {
+	display: inline-block;
+	font-family: 'FontAwesome';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	margin-right: 10px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+/*Clases para los iconos de los elementos del menu*/
+.icon-news::before { content: "\f1d4" }
+.icon-home::before { content: "\f015" }
+.icon-image::before { content: "\f03e" }
+.icon-upload::before { content: "\f093" }
+.icon-star::before { content: "\f005" }
+.icon-mail::before { content: "\f064" }
+.icon-lock::before { content: "\f023" }
+.icon-back::before { content: "\f190" }
+
+
+/* Effect Move Left */
+.OP_perspective .OP_container {
+	-webkit-transition: -webkit-transform 0.4s;
+	transition: transform 0.4s;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+.OP_perspective .OP_container::after {
+	background: rgba(255,255,255,0.6);
+}
+
+.OP_perspective.OP_animate .OP_container {
+	-webkit-transform: translateX(-50%) rotateY(45deg) translateZ(-50px);
+	transform: translateX(-50%) rotateY(45deg) translateZ(-50px);
+}
+
+.no-csstransforms3d .OP_perspective.OP_animate .OP_container {
+	left: -75%;
+}
+
+.OP_perspective .OP_nav a {
+	display: block;
+	white-space: nowrap;
+	font-weight: 300;
+	margin: 0 0 30px 0; /*Distancia entre los items del menu*/
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	text-decoration:none;
+
+	color: white;
+	opacity: 0;
+	-webkit-transform: translateX(100px) translateZ(-1000px);
+	transform: translateX(100px) translateZ(-1000px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+	transition: transform 0.4s, opacity 0.4s;
+}
+
+.OP_perspective .OP_nav a:hover {
+	color: #333;
+	text-decoration: none;
+}
+
+.OP_perspective.OP_animate .OP_nav a {
+	opacity: 1;
+	-webkit-transform: translateX(0) translateZ(0);
+	transform: translateX(0) translateZ(0);
+}
+
+/*Esto que sigue es para que los elementos aparezcan uno por uno y no todos de golpe*/
+.OP_perspective.OP_animate .OP_nav a:nth-child(2) {
+	-webkit-transition-delay: 0.04s;
+	transition-delay: 0.04s;
+}
+
+.OP_perspective.OP_animate .OP_nav a:nth-child(3) {
+	-webkit-transition-delay: 0.08s;
+	transition-delay: 0.08s;
+}
+
+.OP_perspective.OP_animate .OP_nav a:nth-child(4) {
+	-webkit-transition-delay: 0.12s;
+	transition-delay: 0.12s;
+}
+
+.OP_perspective.OP_animate .OP_nav a:nth-child(5) {
+	-webkit-transition-delay: 0.16s;
+	transition-delay: 0.16s;
+}
+
+.OP_perspective.OP_animate .OP_nav a:nth-child(6) {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.OP_perspective.OP_animate .OP_nav a:nth-child(7) {
+	-webkit-transition-delay: 0.24s;
+	transition-delay: 0.24s;
+}
+
+.OP_perspective.OP_animate .OP_nav a:nth-child(8) {
+	-webkit-transition-delay: 0.28s;
+	transition-delay: 0.28s;
+}
+
+/* Media Queries */
+@media screen and (max-width: 77em) {
+	
+	
+}
+
+@media screen and (max-width: 36.625em), screen and (max-height: 41.75em) {
+
+	
+}
+
+@media screen and (max-width: 31em), screen and (max-height: 36.2em) {
+	.OP_nav {
+		font-size: 1.2em;
+		width: 6.8em;
+	}
+}
+
+@media screen and (max-height: 31.6em) {
+	.OP_nav a {
+		margin-bottom: 20px;
+	}
+}
